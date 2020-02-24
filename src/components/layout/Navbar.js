@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const body = document.getElementsByTagName("body");
+// const body = document.getElementsByTagName("body");
 
 const Navbar = () => {
   const [btnToggled, setBtnToggled] = useState(false);

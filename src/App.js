@@ -27,7 +27,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="site-content container">
+        <div className="site-content">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />

@@ -11,16 +11,32 @@ const Footer = () => {
           </p>
           <img src="./img/logo.png" alt="mycourse" width="80" />
           <div className="footer__logo__sm">
-            <a href="https://www.facebook.com/" target="_blank">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-facebook-square"></i>
             </a>
-            <a href="https://www.twitter.com/" target="_blank">
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-twitter-square"></i>
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-instagram-square"></i>
             </a>
-            <a href="https://www.youtube.com/" target="_blank">
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-youtube-square"></i>
             </a>
           </div>
