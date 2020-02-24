@@ -17,6 +17,10 @@ $success-color: #1eb31e;
   box-sizing: border-box;
 }
 
+body {
+  background-color: $light-color;
+}
+
 a {
   text-decoration: none;
 }
@@ -53,12 +57,12 @@ button:focus {
     width: 100%;
     height: 34px;
     padding: 0.5rem 5%;
-    background-color: $light-color;
+    background-color: darken($dark-color, 5);
 
     button {
       background: none;
       border: none;
-      color: $dark-color;
+      color: $light-color;
       font-size: 1rem;
     }
   }
@@ -186,7 +190,7 @@ button:focus {
       right: -100%;
       width: 300px;
       height: calc(100vh - 104px);
-      background-color: $primary-color;
+      background-color: $dark-color;
       display: flex;
       flex-direction: column;
       overflow-y: visible;
@@ -195,7 +199,7 @@ button:focus {
 
       .navbar__nav__list__item {
         width: 100%;
-        border-bottom: 1px solid darken($primary-color, 10);
+        border-bottom: 1px solid $secondary-color;
 
         .sublist {
           width: 100%;
@@ -371,11 +375,54 @@ button:focus {
   }
 }
 
+// Header
+.header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  font-size: 3rem;
+  color: $light-color;
+  text-shadow: 2px 2px 4px #000;
+}
+
+// Navigation
+.navigation {
+  height: 30px;
+  background-color: #fff;
+  color: $dark-color;
+  display: flex;
+  align-items: center;
+  padding: 20px 5%;
+
+  a {
+    color: $dark-color;
+  }
+}
+
+// Page Wrapper
+.page-wrapper {
+  margin: 20px 5%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+// Page Title
+.page-title {
+  margin-bottom: 16px;
+}
+
+// Page Paragpaph
+.page-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
 // Home Page
 .home-page__slideshow-bubbles {
   position: absolute;
   top: 120px;
-  left: calc(50% - 50px);
+  left: calc(50% - 42px);
   width: 100px;
   height: 4px;
   display: flex;
@@ -387,13 +434,17 @@ button:focus {
     width: 100%;
     height: 100%;
     margin-right: 8px;
-    background-color: $light-color;
+    background-color: $dark-color;
     border: none;
     transition: 0.5s;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .bubble-btn.current {
-    background-color: $dark-color;
+    background-color: $light-color;
     transition: 0.5s;
   }
 }
