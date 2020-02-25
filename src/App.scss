@@ -675,6 +675,62 @@ button:focus {
   }
 }
 
+// Classrooms Page
+.classrooms-page__classrooms {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  .classroom {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.75);
+
+    h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $dark-color;
+      color: $secondary-color;
+      padding: 8px 0 8px 8px;
+      transition: 0.4s ease-in-out 0.1s;
+    }
+  }
+
+  .classroom::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba($light-color, 0.6);
+    transition: 0.4s ease-in-out 0.1s;
+  }
+
+  .classroom:hover {
+    h2 {
+      top: 200px;
+      transition: 0.4s ease-in-out 0.1s;
+    }
+  }
+
+  .classroom:hover::before {
+    height: 0;
+    transition: 0.4s ease-in-out 0.1s;
+  }
+}
+
 // Animations
 @keyframes listSlide {
   from {
