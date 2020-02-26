@@ -731,6 +731,63 @@ button:focus {
   }
 }
 
+// Contact Page
+.contact-page__list {
+  font-size: 1.2rem;
+  margin: 8px 0;
+
+  li {
+    padding: 8px 0;
+
+    &:nth-child(even) {
+      background-color: $light-color;
+    }
+  }
+}
+
+.contact-page__form-map {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin: 24px 0;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .input-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 0.9rem;
+      }
+
+      .input-style {
+        padding: 6px 0 6px 6px;
+        font-size: 1.1rem;
+        border: none;
+        border-bottom: 4px solid $secondary-color;
+        background-color: $light-color;
+      }
+
+      textarea {
+        height: 120px;
+      }
+
+      input[type="button"] {
+        background-color: $dark-color;
+        color: $light-color;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 // Animations
 @keyframes listSlide {
   from {

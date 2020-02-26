@@ -8,7 +8,7 @@ const Lectures = () => {
       <Header title={"Lectures"} />
       <div className="navigation">
         <Link to="/">Home</Link>&nbsp;&middot;&nbsp;
-        <Link to="/about">Lectures</Link>
+        <Link to="/lectures">Lectures</Link>
       </div>
       <div className="page-wrapper">
         <h1 className="page-title">Lorem, ipsum.</h1>

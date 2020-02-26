@@ -807,6 +807,78 @@ button:focus {
   transition: 0.4s ease-in-out 0.1s;
 }
 
+.contact-page__list {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.contact-page__list li {
+  padding: 8px 0;
+}
+
+.contact-page__list li:nth-child(even) {
+  background-color: #ececec;
+}
+
+.contact-page__form-map {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin: 24px 0;
+}
+
+.contact-page__form-map .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-page__form-map .form .input-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-page__form-map .form .input-group label {
+  font-size: 0.9rem;
+}
+
+.contact-page__form-map .form .input-group .input-style {
+  padding: 6px 0 6px 6px;
+  font-size: 1.1rem;
+  border: none;
+  border-bottom: 4px solid #fa8b68;
+  background-color: #ececec;
+}
+
+.contact-page__form-map .form .input-group textarea {
+  height: 120px;
+}
+
+.contact-page__form-map .form .input-group input[type="button"] {
+  background-color: #333;
+  color: #ececec;
+  border: none;
+  cursor: pointer;
+}
+
 @-webkit-keyframes listSlide {
   from {
     right: -100%;
