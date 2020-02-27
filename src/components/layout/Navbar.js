@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-// const body = document.getElementsByTagName("body");
-
 const Navbar = () => {
   const [btnToggled, setBtnToggled] = useState(false);
-
-  // if (btnToggled) {
-  //   body[0].style.overflowY = "hidden";
-  // } else {
-  //   body[0].style.overflowY = "visible";
-  // }
 
   return (
     <nav className="navbar">
@@ -29,56 +21,168 @@ const Navbar = () => {
           }
         >
           <li className="navbar__nav__list__item">
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li className="navbar__nav__list__item">
-            <Link to="/about">About Us</Link>
+            <Link
+              to="/about"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              About Us
+            </Link>
           </li>
           <li className="navbar__nav__list__item">
-            <Link to="/lectures">Lectures</Link>
+            <Link
+              to="/lectures"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              Lectures
+            </Link>
             <ul className="sublist">
               <li>
-                <Link to="/maths">Maths</Link>
+                <Link
+                  to="/maths"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Maths
+                </Link>
               </li>
               <li>
-                <Link to="/physics">Physics</Link>
+                <Link
+                  to="/physics"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Physics
+                </Link>
               </li>
               <li>
-                <Link to="/chemistry">Chemistry</Link>
+                <Link
+                  to="/chemistry"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Chemistry
+                </Link>
               </li>
               <li>
-                <Link to="/biology">Biology</Link>
+                <Link
+                  to="/biology"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Biology
+                </Link>
               </li>
               <li>
-                <Link to="/literature">Literature</Link>
+                <Link
+                  to="/literature"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Literature
+                </Link>
               </li>
               <li>
-                <Link to="/geography">Geography</Link>
+                <Link
+                  to="/geography"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Geography
+                </Link>
               </li>
             </ul>
           </li>
           <li className="navbar__nav__list__item">
-            <Link to="/tutors">Tutors</Link>
+            <Link
+              to="/tutors"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              Tutors
+            </Link>
           </li>
           <li className="navbar__nav__list__item">
-            <Link to="/classrooms">Classrooms</Link>
+            <Link
+              to="/classrooms"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              Classrooms
+            </Link>
             <ul className="sublist">
               <li>
-                <Link to="/standard-classrooms">Standard Classrooms</Link>
+                <Link
+                  to="/standard-classrooms"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Standard Classrooms
+                </Link>
               </li>
               <li>
-                <Link to="/conferance-rooms">Conferance Rooms</Link>
+                <Link
+                  to="/conferance-rooms"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Conferance Rooms
+                </Link>
               </li>
               <li>
-                <Link to="/labs">Labs</Link>
+                <Link
+                  to="/labs"
+                  onClick={() => {
+                    setBtnToggled(false);
+                  }}
+                >
+                  Labs
+                </Link>
               </li>
             </ul>
           </li>
           <li className="navbar__nav__list__item">
-            <Link to="/galery">Galery</Link>
+            <Link
+              to="/galery"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              Galery
+            </Link>
           </li>
           <li className="navbar__nav__list__item">
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              onClick={() => {
+                setBtnToggled(false);
+              }}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
         <button

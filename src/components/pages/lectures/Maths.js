@@ -27,7 +27,7 @@ const Maths = () => {
         </p>
         <hr />
         <div className="page-cards-wrapper">
-          <div className="page-card" style={{ backgroundColor: "pink" }}>
+          <div className="page-card" style={{ backgroundColor: "#FAC8CD" }}>
             <div className="page-card-img">
               <i className="fas fa-chalkboard"></i>
             </div>
@@ -36,7 +36,7 @@ const Maths = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
-          <div className="page-card" style={{ backgroundColor: "skyblue" }}>
+          <div className="page-card" style={{ backgroundColor: "#D7BCC8" }}>
             <div className="page-card-img">
               <i className="fas fa-book-open"></i>
             </div>
@@ -45,7 +45,7 @@ const Maths = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
-          <div className="page-card" style={{ backgroundColor: "olive" }}>
+          <div className="page-card" style={{ backgroundColor: "#98B6B1" }}>
             <div className="page-card-img">
               <i className="fas fa-school"></i>
             </div>
@@ -54,7 +54,7 @@ const Maths = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
-          <div className="page-card" style={{ backgroundColor: "yellow" }}>
+          <div className="page-card" style={{ backgroundColor: "#629677" }}>
             <div className="page-card-img">
               <i className="fas fa-microscope"></i>
             </div>

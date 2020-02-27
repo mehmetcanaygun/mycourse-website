@@ -194,7 +194,7 @@ button:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-y: visible;
-  z-index: 2;
+  z-index: 5;
   -webkit-animation: listSlide 0.3s ease-in-out forwards;
           animation: listSlide 0.3s ease-in-out forwards;
 }
@@ -498,6 +498,29 @@ button:focus {
   text-align: justify;
 }
 
+.page-image {
+  margin: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 10px solid #fa8b68;
+  border-style: outset;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+}
+
 .home-page__slideshow-bubbles {
   position: absolute;
   top: 120px;
@@ -765,6 +788,7 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
+  font-size: 1.2rem;
   width: 100%;
   height: 40px;
   display: -webkit-box;
@@ -914,6 +938,10 @@ button:focus {
   cursor: pointer;
 }
 
+.contact-page__form-map .map img {
+  width: 100%;
+}
+
 @-webkit-keyframes listSlide {
   from {
     right: -100%;
@@ -938,6 +966,160 @@ button:focus {
   }
   .navbar .navbar__nav .navbar__nav__hamburger-btn {
     display: block;
+  }
+  .page-image img {
+    width: 250px;
+    height: 250px;
+  }
+  .tutors-page__tutors {
+    gap: 10px;
+  }
+  .tutors-page__tutors .tutor {
+    gap: 5px;
+  }
+  .tutors-page__tutors .tutor .tutor-img img {
+    width: 120px;
+  }
+  .classrooms-page__classrooms {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .classrooms-page__classrooms .classroom {
+    margin: 5px 0;
+  }
+  .contact-page__form-map {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  .contact-page__form-map .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact-page__form-map .form .input-group .input-style {
+    padding: 3px 0 3px 3px;
+    font-size: 1rem;
+  }
+  .contact-page__form-map .form .input-group textarea {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar__nav .navbar__nav__list.toggled {
+    width: 100%;
+  }
+  .navbar .navbar__nav .navbar__nav__list.toggled .navbar__nav__list__item .sublist {
+    display: none;
+  }
+  .footer .footer__links {
+    display: none;
+  }
+  .footer .footer__logo .footer__logo__content .footer__logo__title,
+  .footer .footer__logo .footer__logo__content img {
+    margin-bottom: 0.5rem;
+  }
+  .footer .footer__logo .footer__logo__content .footer__logo__sm a {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+  }
+  .footer .footer__contact {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .footer .footer__contact .footer__contact__content ul {
+    display: none;
+  }
+  .footer .footer__contact .footer__contact__content img {
+    margin-top: 3rem;
+  }
+  .page-cards-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .page-cards-wrapper .page-card .page-card-img {
+    font-size: 3rem;
+    padding: 6px 0;
+  }
+  .page-cards-wrapper .page-card .page-card-title {
+    margin: 6px 0;
+  }
+  .page-cards-wrapper .page-card .page-card-body {
+    margin: 6px 0;
+  }
+  .page-paragraph {
+    font-size: 1rem;
+  }
+  .page-list {
+    margin: 8px 0;
+  }
+  .page-list li {
+    font-size: 1rem;
+  }
+  .home-page__slideshow .slide .content {
+    position: absolute;
+    bottom: -600px;
+    left: 0;
+    width: 100%;
+    border-top: 6px solid #fa8b68;
+    border-right: none;
+  }
+  .home-page__slideshow .slide.current .content {
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
+  }
+  .lectures-page__lectures {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .tutors-page__tutors {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .tutors-page__tutors .tutor {
+    gap: 2px;
+  }
+  .tutors-page__tutors .tutor .tutor-img img {
+    width: 80px;
+  }
+  .classrooms-page__classrooms {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact-page__list {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+  .contact-page__list li {
+    padding: 8px 0;
+  }
+  .contact-page__list li:nth-child(even) {
+    background-color: #ececec;
+  }
+  .contact-page__form-map {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .contact-page__form-map .form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 /*# sourceMappingURL=App.css.map */
