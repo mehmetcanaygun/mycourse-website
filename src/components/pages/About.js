@@ -3,12 +3,32 @@ import { Link } from "react-router-dom";
 import Header from "../layout/Header";
 
 const About = () => {
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="about-page">
       <Header title={"About Us"} />
       <div className="navigation">
-        <Link to="/">Home</Link>&nbsp;&middot;&nbsp;
-        <Link to="/about">About Us</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Home
+        </Link>
+        &nbsp;&middot;&nbsp;
+        <Link
+          to="/about"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          About Us
+        </Link>
       </div>
       <div className="page-wrapper">
         <h1 className="page-title">Lorem, ipsum dolor.</h1>

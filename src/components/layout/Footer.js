@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <footer className="footer container">
       <div className="footer__logo">
@@ -46,25 +51,74 @@ const Footer = () => {
         <div className="footer__links__content">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link
+                to="/"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About Us</Link>
+              <Link
+                to="/about"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/lectures">Lectures</Link>
+              <Link
+                to="/lectures"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                Lectures
+              </Link>
             </li>
             <li>
-              <Link to="/tutors">Tutors</Link>
+              <Link
+                to="/tutors"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                Tutors
+              </Link>
             </li>
             <li>
-              <Link to="/classrooms">Classrooms</Link>
+              <Link
+                to="/classrooms"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                Classrooms
+              </Link>
             </li>
             <li>
-              <Link to="/galery">Galery</Link>
+              <Link
+                to="/gallery"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                Gallery
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link
+                to="/contact"
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -83,7 +137,13 @@ const Footer = () => {
               <i className="fas fa-envelope"></i> info@mycourse.com
             </li>
           </ul>
-          <img src="./img/author-logo.png" alt="site-author" height="30" />
+          <a
+            href="https://github.com/mehmetcanaygun"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/author-logo.png" alt="site-author" height="30" />
+          </a>
         </div>
       </div>
     </footer>

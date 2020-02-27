@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [btnToggled, setBtnToggled] = useState(false);
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
 
   return (
     <nav className="navbar">
@@ -12,7 +16,13 @@ const Navbar = () => {
         </button>
       </div>
       <div className="navbar__nav">
-        <Link to="/" className="navbar__nav__logo">
+        <Link
+          to="/"
+          className="navbar__nav__logo"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
           <img src="./img/logo.png" alt="mycourse" width="60" />
         </Link>
         <ul
@@ -25,6 +35,7 @@ const Navbar = () => {
               to="/"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
               Home
@@ -35,6 +46,7 @@ const Navbar = () => {
               to="/about"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
               About Us
@@ -45,6 +57,7 @@ const Navbar = () => {
               to="/lectures"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
               Lectures
@@ -55,6 +68,7 @@ const Navbar = () => {
                   to="/maths"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Maths
@@ -65,6 +79,7 @@ const Navbar = () => {
                   to="/physics"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Physics
@@ -75,6 +90,7 @@ const Navbar = () => {
                   to="/chemistry"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Chemistry
@@ -85,6 +101,7 @@ const Navbar = () => {
                   to="/biology"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Biology
@@ -95,6 +112,7 @@ const Navbar = () => {
                   to="/literature"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Literature
@@ -105,6 +123,7 @@ const Navbar = () => {
                   to="/geography"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Geography
@@ -117,6 +136,7 @@ const Navbar = () => {
               to="/tutors"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
               Tutors
@@ -127,6 +147,7 @@ const Navbar = () => {
               to="/classrooms"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
               Classrooms
@@ -137,6 +158,7 @@ const Navbar = () => {
                   to="/standard-classrooms"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Standard Classrooms
@@ -147,6 +169,7 @@ const Navbar = () => {
                   to="/conferance-rooms"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Conferance Rooms
@@ -157,6 +180,7 @@ const Navbar = () => {
                   to="/labs"
                   onClick={() => {
                     setBtnToggled(false);
+                    scrollTop();
                   }}
                 >
                   Labs
@@ -166,12 +190,13 @@ const Navbar = () => {
           </li>
           <li className="navbar__nav__list__item">
             <Link
-              to="/galery"
+              to="/gallery"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
-              Galery
+              Gallery
             </Link>
           </li>
           <li className="navbar__nav__list__item">
@@ -179,6 +204,7 @@ const Navbar = () => {
               to="/contact"
               onClick={() => {
                 setBtnToggled(false);
+                scrollTop();
               }}
             >
               Contact

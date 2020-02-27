@@ -3,12 +3,32 @@ import { Link } from "react-router-dom";
 import Header from "../layout/Header";
 
 const Classrooms = () => {
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="classrooms-page">
       <Header title={"Classrooms"} />
       <div className="navigation">
-        <Link to="/">Home</Link>&nbsp;&middot;&nbsp;
-        <Link to="/classrooms">Classrooms</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Home
+        </Link>
+        &nbsp;&middot;&nbsp;
+        <Link
+          to="/classrooms"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Classrooms
+        </Link>
       </div>
       <div className="page-wrapper">
         <h2 className="page-title">Lorem, ipsum.</h2>
@@ -24,6 +44,9 @@ const Classrooms = () => {
               background:
                 "url(./img/classroom-bg.jpg) no-repeat center center/cover"
             }}
+            onClick={() => {
+              scrollTop();
+            }}
           >
             <h2>Standard Classrooms</h2>
           </Link>
@@ -35,6 +58,9 @@ const Classrooms = () => {
               background:
                 "url(./img/conferance-room-bg.jpg) no-repeat center center/cover"
             }}
+            onClick={() => {
+              scrollTop();
+            }}
           >
             <h2>Conferance Rooms</h2>
           </Link>
@@ -44,6 +70,9 @@ const Classrooms = () => {
             className="classroom"
             style={{
               background: "url(./img/labs-bg.jpg) no-repeat center center/cover"
+            }}
+            onClick={() => {
+              scrollTop();
             }}
           >
             <h2>Laboratories</h2>

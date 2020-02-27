@@ -3,12 +3,32 @@ import { Link } from "react-router-dom";
 import Header from "../layout/Header";
 
 const Lectures = () => {
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="lectures-page">
       <Header title={"Lectures"} />
       <div className="navigation">
-        <Link to="/">Home</Link>&nbsp;&middot;&nbsp;
-        <Link to="/lectures">Lectures</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Home
+        </Link>
+        &nbsp;&middot;&nbsp;
+        <Link
+          to="/lectures"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Lectures
+        </Link>
       </div>
       <div className="page-wrapper">
         <h1 className="page-title">Lorem, ipsum.</h1>
@@ -23,6 +43,9 @@ const Lectures = () => {
               background:
                 "url(./img/maths-link-bg.jpg) no-repeat center center/cover"
             }}
+            onClick={() => {
+              scrollTop();
+            }}
           >
             Maths
           </Link>
@@ -31,6 +54,9 @@ const Lectures = () => {
             style={{
               background:
                 "url(./img/physics-link-bg.jpg) no-repeat center center/cover"
+            }}
+            onClick={() => {
+              scrollTop();
             }}
           >
             Physics
@@ -41,6 +67,9 @@ const Lectures = () => {
               background:
                 "url(./img/chemistry-link-bg.jpg) no-repeat center center/cover"
             }}
+            onClick={() => {
+              scrollTop();
+            }}
           >
             Chemistry
           </Link>
@@ -49,6 +78,9 @@ const Lectures = () => {
             style={{
               background:
                 "url(./img/biology-link-bg.jpg) no-repeat center center/cover"
+            }}
+            onClick={() => {
+              scrollTop();
             }}
           >
             Biology
@@ -59,6 +91,9 @@ const Lectures = () => {
               background:
                 "url(./img/literature-link-bg.jpg) no-repeat center center/cover"
             }}
+            onClick={() => {
+              scrollTop();
+            }}
           >
             Literature
           </Link>
@@ -67,6 +102,9 @@ const Lectures = () => {
             style={{
               background:
                 "url(./img/geography-link-bg.jpg) no-repeat center center/cover"
+            }}
+            onClick={() => {
+              scrollTop();
             }}
           >
             Geography

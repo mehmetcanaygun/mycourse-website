@@ -55,6 +55,11 @@ const Home = () => {
     clearInterval(slideInterval);
   };
 
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   useEffect(() => {
     autoSlide();
 
@@ -117,7 +122,14 @@ const Home = () => {
             >
               <h1>{slide.slideTitle}</h1>
               <p>{slide.slideContent}</p>
-              <Link to={slide.slideLink}>More</Link>
+              <Link
+                to={slide.slideLink}
+                onClick={() => {
+                  scrollTop();
+                }}
+              >
+                More
+              </Link>
             </div>
           </div>
         ))}

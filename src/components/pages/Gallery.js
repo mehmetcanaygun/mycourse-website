@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Header from "../layout/Header";
 import { Link } from "react-router-dom";
 
-const Galery = () => {
+const Gallery = () => {
+  const scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   const galleryImages = [
     {
       imgId: 0,
@@ -61,8 +66,23 @@ const Galery = () => {
     <div className="gallery-page">
       <Header title={"Gallery"} />
       <div className="navigation">
-        <Link to="/">Home</Link>&nbsp;&middot;&nbsp;
-        <Link to="/galery">Gallery</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Home
+        </Link>
+        &nbsp;&middot;&nbsp;
+        <Link
+          to="/gallery"
+          onClick={() => {
+            scrollTop();
+          }}
+        >
+          Gallery
+        </Link>
       </div>
       <div className="page-wrapper">
         <div className="gallery-page__gallery">
@@ -92,4 +112,4 @@ const Galery = () => {
   );
 };
 
-export default Galery;
+export default Gallery;

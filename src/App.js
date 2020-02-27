@@ -6,7 +6,7 @@ import About from "./components/pages/About";
 import Lectures from "./components/pages/Lectures";
 import Tutors from "./components/pages/Tutors";
 import Classrooms from "./components/pages/Classrooms";
-import Galery from "./components/pages/Galery";
+import Gallery from "./components/pages/Gallery";
 import Contact from "./components/pages/Contact";
 import NotFound from "./components/pages/NotFound";
 import Biology from "./components/pages/lectures/Biology";
@@ -34,7 +34,7 @@ function App() {
             <Route exact path="/lectures" component={Lectures} />
             <Route exact path="/tutors" component={Tutors} />
             <Route exact path="/classrooms" component={Classrooms} />
-            <Route exact path="/galery" component={Galery} />
+            <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/biology" component={Biology} />
             <Route exact path="/chemistry" component={Chemistry} />
